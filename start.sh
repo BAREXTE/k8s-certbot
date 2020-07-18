@@ -29,4 +29,4 @@ if test -f "$private_key"; then
 fi
 
 # generate csr
-./easyrsa --batch --dn-mode=org --subject-alt-name="${req_san}" --req-c="${req_cc}" --req-st="${req_province}" --req-city="${req_city}" --req-org="${req_org}" --req-email="${req_email}" --req-ou="${req_o$
+./easyrsa --batch --keysize=4096 --dn-mode=org --subject-alt-name="${req_san}" --req-c="${req_cc}" --req-st="${req_province}" --req-city="${req_city}" --req-org="${req_org}" --req-email="${req_email}" --req-ou="${req_ou}" --req-cn="${req_cn}" gen-req "${req_cn}" nopass
