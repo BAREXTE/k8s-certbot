@@ -14,7 +14,7 @@ req_ou=$CERT_OU
 private_key="/etc/k8s-certbot/secret/tls.key"
 
 # parse domains_arr to req_san
-for domain in ${domains_arr[@]/$req_cn}
+for domain in ${domains_arr[@]:1}
 do
     req_san="$req_san,DNS:$domain"
 done
